@@ -8,7 +8,9 @@ This pattern comes under the creational patterns which are widely used in progra
 
 
 In Our Project we use from 2 Example, in Example1 we use from Famous Example Car.
+
 in this project we have one Interface like "ICar"...
+
 
     public interface ICar
     {
@@ -18,31 +20,34 @@ in this project we have one Interface like "ICar"...
 and another Class that Implementation this Interface like "Benz , Ford , Honda"
 
 
- public class Benz : ICar
- {
-     public void Build()
+     public class Benz : ICar
      {
-         Console.WriteLine("Benz Build...");
-     }
- }//////////////////End of class
+         public void Build()
+         {
+             Console.WriteLine("Benz Build...");
+         }
+     }//////////////////End of class
 
 
- public class Ford : ICar
- {
-     public void Build()
+     public class Ford : ICar
      {
-         Console.WriteLine("Ford Build....");
-     }
- }////////////End of class
+         public void Build()
+         {
+             Console.WriteLine("Ford Build....");
+         }
+     }////////////End of class
 
 
- public class Honda : ICar
- {
-     public void Build()
+     public class Honda : ICar
      {
-         Console.WriteLine("Honda Build....");
+         public void Build()
+         {
+             Console.WriteLine("Honda Build....");
+         }
      }
- }
+
+
+
 
 Suppose in program.cs we need to create Instance for Icar and call Build Method of class:
 
@@ -55,9 +60,11 @@ Suppose in program.cs we need to create Instance for Icar and call Build Method 
 
 in this method we must to repeat create instance and it`s better we use from CarFactory....
 
-  public class CarFactory
-  {
-      public static ICar GetCar(CarModel model)
+
+
+    public class CarFactory{
+
+    public static ICar GetCar(CarModel model)
       {
           ICar _instance = null;
           switch (model)
@@ -75,18 +82,16 @@ in this method we must to repeat create instance and it`s better we use from Car
           }
 
           return _instance;
+      }}////////////End of class
+
+
+
+    public enum CarModel
+      {
+          Benz,
+          Ford ,
+          Honda
       }
-
-
-  }////////////End of class
-
-
-  public enum CarModel
-  {
-      Benz,
-      Ford ,
-      Honda
-  }
 
 ////////////////////////// If we have Use from Factory Design Pattern we call CarFactory and get Instance , it`s easy :) 
   
