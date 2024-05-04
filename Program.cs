@@ -88,6 +88,65 @@
 #endregion
 
 
+#region Example2
+
+
+
+
+
+
+////Sample A------------------
+
+//User userA1 = new User(1, "Javad");
+//userA1.PrintInfo();
+
+
+//FunctionA();
+
+
+
+/*
+ * 
+ * Suppose we used from this class(User) from another method or pages... 
+ * so we mnust to create Instanse from that class like FunctionA
+ */
+
+
+//void FunctionA()
+//{
+//    User userA2 = new User(1, "Tom");
+//    userA2.PrintInfo();
+//}
+
+
+////////Suppose After some time constractor of Class User Added one parameter like "UserAge" we have some error in here so Check SampleB
+
+////Sample B------------------
+///
+
+// User user1 = UserFactory.GetUser();
+//user1.PrintInfo();
+
+//FunctionB();
+
+//void FunctionB()
+//{
+
+//    User user2 = UserFactory.GetUser();
+//    user2.PrintInfo();
+
+//}
+
+
+////// if we help from Factory Design Pattern we just to change UserFactory for Create Instance :)
+
+
+
+
+
+
+
+#endregion
 
 
 
